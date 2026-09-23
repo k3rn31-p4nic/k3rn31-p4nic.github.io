@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hunter</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #121212; }
+    a { color: #7ab7ff; }
+    .card { background: #1c1c1c; border-color: #333; }
+  }
+  h1 { font-size: 1.9rem; margin-bottom: 0.2rem; }
+  .tag { color: #666; font-size: 0.95rem; margin-bottom: 2rem; }
+  @media (prefers-color-scheme: dark) { .tag { color: #999; } }
+  .card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+  }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #888; }
+  code { background: rgba(127,127,127,0.15); padding: 0.1rem 0.35rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Hunter</h1>
+<p class="tag">A private, self-hosted signal inbox — for one person.</p>
+
+<p>
+  Hunter is a personal, single-user tool that collects research papers, research
+  programmes, campus notices, remote jobs, and other technical opportunities from
+  public feeds, ranks them against the owner's own resume and preferences, and
+  presents them as a single prioritized feed. It runs as one self-hosted Go
+  binary, reachable only over the owner's private Tailscale network — there is
+  no public sign-up, no multi-tenant access, and no second account can use this
+  installation.
+</p>
+
+<div class="card">
+  <strong>What it connects to</strong>
+  <p style="margin-bottom:0">
+    Hunter optionally connects to the owner's own Google Account (Gmail and
+    Calendar) to surface application-related emails and create deadline
+    reminders. See the <a href="privacy.html">Privacy Policy</a> for exactly
+    what is accessed and why.
+  </p>
+</div>
+
+<div class="card">
+  <strong>Who runs it</strong>
+  <p style="margin-bottom:0">
+    This is a personal, non-commercial project built and operated by a single
+    individual for their own use. It is not a public product or service.
+  </p>
+</div>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a> ·
+  Contact: <a href="mailto:shivani.a.972@gmail.com">shivani.a.972@gmail.com</a>
+</footer>
+
+</body>
+</html>

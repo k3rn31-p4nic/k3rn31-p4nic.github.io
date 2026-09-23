@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Hunter</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    line-height: 1.65;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #121212; }
+    a { color: #7ab7ff; }
+    th, td { border-color: #333 !important; }
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 0.1rem; }
+  h2 { font-size: 1.2rem; margin-top: 2.2rem; }
+  .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+  @media (prefers-color-scheme: dark) { .updated { color: #999; } }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: rgba(127,127,127,0.12); }
+  footer { margin-top: 3rem; font-size: 0.85rem; color: #888; }
+  code { background: rgba(127,127,127,0.15); padding: 0.1rem 0.35rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Applies to: Hunter (personal, single-user application) · Last updated: 2026-09-24</p>
+
+<p>
+  Hunter is a personal, non-commercial, self-hosted application built and used
+  by a single individual (the "owner"). It is not offered to the public, has no
+  sign-up, and no one other than the owner can connect an account to this
+  installation. This policy explains what data Hunter accesses from Google,
+  why, and how it is handled.
+</p>
+
+<h2>1. What Google data Hunter accesses</h2>
+<p>Hunter requests the following Google OAuth scopes, only from the owner's own Google Account(s):</p>
+<table>
+  <tr><th>Scope</th><th>Purpose</th></tr>
+  <tr>
+    <td><code>gmail.readonly</code></td>
+    <td>
+      Reads new incoming Gmail messages only, starting from the connection
+      point forward. Hunter never lists historical mail and never modifies,
+      labels, or deletes anything in the mailbox. Used to surface campus
+      notices and to detect and classify application-status emails
+      (applied / interview / offer / rejected, etc.).
+    </td>
+  </tr>
+  <tr>
+    <td><code>gmail.send</code></td>
+    <td>
+      Sends email <em>as the owner</em> for two purposes only: (a) a daily/urgent
+      digest of new opportunities to the owner's own inbox, and (b) drafting
+      job applications the owner has explicitly reviewed and approved. This
+      scope cannot read mail beyond what <code>gmail.readonly</code> already
+      permits.
+    </td>
+  </tr>
+  <tr>
+    <td><code>calendar.events</code></td>
+    <td>
+      Creates calendar events (e.g. application deadlines) on the owner's
+      primary calendar. Limited to managing events Hunter itself creates —
+      not general calendar read/write access.
+    </td>
+  </tr>
+  <tr>
+    <td><code>openid</code>, <code>email</code></td>
+    <td>Identifies which Google account has been connected.</td>
+  </tr>
+</table>
+
+<h2>2. How the data is used</h2>
+<p>
+  Data pulled from Gmail is used only to rank and surface opportunities, track
+  application status, and generate reminders — all for the owner's own benefit.
+  It is never used for advertising, never sold, and never shared with any third
+  party for their own purposes.
+</p>
+<p>
+  A small amount of message or job-listing text may be sent to AI language
+  model providers (Google's Gemini API, and a separate OpenAI-compatible
+  completion endpoint) strictly to classify an application email's pipeline
+  stage or to judge a job listing's fit against the owner's resume. These
+  providers process the text to return a classification and do not receive
+  standing access to the Google account.
+</p>
+
+<h2>3. Storage and security</h2>
+<ul>
+  <li>Hunter runs as a single self-hosted process, reachable only over the owner's private Tailscale network — it is never exposed on the public internet.</li>
+  <li>Google refresh tokens are encrypted at rest (AES) with a locally held master key before being stored.</li>
+  <li>No Google data is stored in shared, third-party, or cloud databases outside the owner's own server.</li>
+</ul>
+
+<h2>4. Data retention and deletion</h2>
+<p>
+  Fetched item and application data is retained only as long as the owner keeps
+  this installation running. The owner can disconnect Google access and delete
+  all locally stored data at any time by revoking Hunter's access at
+  <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>
+  and removing the local database.
+</p>
+
+<h2>5. Limited Use disclosure</h2>
+<p>
+  Hunter's use and transfer of information received from Google APIs to any
+  other app adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+  including the Limited Use requirements.
+</p>
+
+<h2>6. Contact</h2>
+<p>
+  Questions about this policy or Hunter's data handling can be sent to
+  <a href="mailto:shivani.a.972@gmail.com">shivani.a.972@gmail.com</a>.
+</p>
+
+<footer>
+  <a href="index.html">← Back to homepage</a>
+</footer>
+
+</body>
+</html>
